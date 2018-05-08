@@ -6,14 +6,19 @@
   "scripts": {
     "test": "jest --watch",
     "dev": "webpack-dev-server --mode development",
+    "build:css":
+      "node-sass --output-style compressed styles.scss dist/styles.css",
     "build": "webpack -p --mode production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
     "source-map-loader": "^0.2.3",
+    "style-loader": "^0.21.0",
     "ts-loader": "^4.3.0",
     "typescript": "^2.8.3",
     "webpack": "^4.8.1",
@@ -21,21 +26,15 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "apprun": "^1.12.5"
+    "apprun": "^1.12.5",
+    "firebase": "^5.0.1"
   },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "globals": {
       "ts-jest": {
         "enableTsDiagnostics": true
