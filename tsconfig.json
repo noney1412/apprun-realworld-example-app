@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "es5",
     "jsx": "react",
+    "allowJs": true,
     "reactNamespace": "app",
+    "outDir": "./public",
     "lib": ["dom", "es2015", "es5"],
     "sourceMap": true,
     "experimentalDecorators": true,

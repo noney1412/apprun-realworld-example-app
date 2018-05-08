@@ -1,7 +1,7 @@
 {
-  "name": "realworld-starter-kit",
+  "name": "apprun-webboard-example",
   "version": "1.0.0",
-  "description": "> ### AppRun codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.",
+  "description": "> this project is fork from apprun-realworld-example ",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
@@ -11,43 +11,39 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yysun/realworld-starter-kit.git"
+    "url": "git+https://github.com/noney1412/apprun-webboard-example-app.git"
   },
-  "keywords": [],
+  "keywords": ["webboard", "apprun"],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yysun/realworld-starter-kit/issues"
+    "url": "https://github.com/noney1412/apprun-webboard-example-app.git/issues"
   },
-  "homepage": "https://github.com/yysun/realworld-starter-kit#readme",
+  "homepage":
+    "https://github.com/noney1412/apprun-webboard-example-app.git#readme",
   "devDependencies": {
-    "@types/jest": "^22.0.1",
-    "jest": "^22.0.5",
+    "@types/jest": "^22.2.3",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^22.4.3",
     "source-map-loader": "^0.2.3",
-    "ts-jest": "^22.0.1",
-    "ts-loader": "^2.3.7",
-    "tslib": "^1.7.1",
-    "tslint": "^5.7.0",
-    "typescript": "^2.6.2",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.10.1"
+    "ts-jest": "^22.4.5",
+    "ts-loader": "^4.3.0",
+    "tslib": "^1.9.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "apprun": "^1.8.2",
-    "marked": "^0.3.12"    
+    "apprun": "^1.12.5",
+    "marked": "^0.3.19"
   },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
   }
 }
