@@ -20,10 +20,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js']
   },
   module: {
-    rules: [
-      { test: /.tsx?$/, loader: 'ts-loader' },
-      { test: /\.js$/, use: ['source-map-loader'], enforce: 'pre' }
-    ]
+    rules: [{ test: /.tsx?$/, loader: 'ts-loader' }]
   },
   devServer: {
     open: true
