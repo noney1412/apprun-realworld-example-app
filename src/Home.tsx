@@ -7,7 +7,7 @@ export default class homeComponent extends Component {
     return (
       <div>
         <h1>{state}</h1>
-        <div class="test">5555</div>
+        <div className="test">5555</div>
         <button>change state</button>
         <input oninput={e => app.run('input', e)} />
       </div>
