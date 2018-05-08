@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
+    "module": "es2015",
+    "moduleResolution": "node",
     "jsx": "react",
-    "allowJs": true,
     "reactNamespace": "app",
-    "outDir": "./public",
     "lib": ["dom", "es2015", "es5"],
-    "sourceMap": true,
     "experimentalDecorators": true,
-    "importHelpers": true
+    "sourceMap": true
   }
 }

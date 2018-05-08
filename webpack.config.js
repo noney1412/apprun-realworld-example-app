@@ -2,8 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production",
-  context: path.join(__dirname, "./src"),
+  entry: {
+    app: "./src/main.tsx"
+  },
   plugins: [
     new HtmlWebpackPlugin({
       // Also generate a test.html
@@ -11,25 +12,21 @@ module.exports = {
       template: "public/index.html"
     })
   ],
-  entry: {
-    app: "./main.ts"
-  },
   output: {
-    filename: "[name].js"
+    filename: "[name].js",
+    path: path.resolve(__dirname + "/dist")
   },
   resolve: {
-    extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+    extensions: [".ts", ".tsx", ".js"]
   },
   module: {
     rules: [
       { test: /.tsx?$/, loader: "ts-loader" },
-      {
-        test: /\.js$/,
-        use: ["source-map-loader"],
-        enforce: "pre"
-      }
+      { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" }
     ]
   },
-  devtool: "source-map",
-  devServer: {}
+  devServer: {
+    open: true
+  },
+  devtool: "source-map"
 };
