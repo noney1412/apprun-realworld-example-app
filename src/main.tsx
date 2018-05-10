@@ -1,6 +1,7 @@
 import home from './home';
 import app from 'apprun';
 
+
 app.on('#', _ => app.run('#Home'));
 
 app.on('//', route => {
@@ -33,6 +34,7 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 const element = 'my-app';
-new Home().mount(element);
+
+new Home().mount(element, { render: true, global_event: true });
 new About().mount(element);
-new Contact().mount(element);
+new Contact().mount(element, { render: true, global_event: true });
